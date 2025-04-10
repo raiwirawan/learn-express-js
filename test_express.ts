@@ -1,4 +1,5 @@
-const express = require("express");
+import express from "express";
+import { Request, Response } from "express";
 const path = require("path");
 const app = express();
 const port = 3000;
@@ -7,7 +8,9 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, "public")));
 
 // Route handler
-app.get("/", (req: { [key: string]: any }, res: { [key: string]: any }) => {
+
+// Route handler
+app.get("/", (req: Request, res: Response) => {
 	res.sendFile(path.join(__dirname, "index.html"));
 });
 
