@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
 class UserController {
@@ -56,4 +56,4 @@ router.post("/", userController.createUser);
 router.put("/:id", userController.updateUser);
 router.delete("/:id", userController.deleteUser);
 
-module.exports = router;
+export default router;
