@@ -1,4 +1,4 @@
-import router from "../controllers/user.controller";
+import userController from "../controllers/user.controller";
 const authMiddleware = require("../middlewares/auth.middleware");
 
 // Public routes
